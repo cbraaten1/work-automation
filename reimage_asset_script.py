@@ -26,7 +26,7 @@ for asset, laptop in to_dict.items():
     if value < 0:    
         asset_less_zero.append(asset)
 
-email_file = open(r'A\path\to\the\xlsx\file', 'r+')
+email_file = open(r'A\path\to\the\txt\file', 'r+')
 email_file.truncate(0)
 email_file.write(str(asset_less_zero))
 email_file.close()
