@@ -26,4 +26,4 @@ for i in range(1, total_row + 1):
 # Saving the destionation file.
 wb2.save(str(destination_file))
 
-# https://www.geeksforgeeks.org/python-how-to-copy-data-from-one-excel-sheet-to-another/
+# https://www.geeksforgeeks.org/python-how-to-copy-data-from-one-excel-sheet-to-another/ - source of the script
