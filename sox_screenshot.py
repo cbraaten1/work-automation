@@ -13,7 +13,7 @@ while image_title != '':
     counter += 1
     ss_region = (1207, 515, 1870, 1080)
     ss_img = ImageGrab.grab(ss_region)
-    ss_img.save(image_title + '.jpg')
+    ss_img.save(f'some\path\to\the\{image_title}.jpg', 'JPEG')
 
     if counter == 1:
         another = input('Do you need another screenshot? ').lower()
