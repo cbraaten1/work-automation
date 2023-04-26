@@ -5,7 +5,6 @@ at The Company.
 from PIL import ImageGrab
 import win32com.client as win32
 
-# image_path = r'some\path\to\the\folder' - Trying to use this path to save the image to for the email to send from this folder
 image_title = input('Name image: ')
 counter = 0
 
