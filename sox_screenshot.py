@@ -17,14 +17,14 @@ import time
 
 image_title = input('Screenshot Name: ')
 counter = 0
-folder_dir = 'C:\\a\\path\\to\\the\\folder\\dir'
+folder_dir = 'C:\\a\\path\\to\\the\\folder\\dir' # folder sitting on the desktop
 image = []
 
 while image_title != '':
     counter += 1
     ss_region = (1207, 515, 1870, 1080)
     ss_img = ImageGrab.grab(ss_region)
-    ss_img.save(f'C:\\a\\path\\to\\the\\folder\\{image_title}.jpg', 'JPEG')
+    ss_img.save(f'C:\\a\\path\\to\\the\\folder\\{image_title}.jpg', 'JPEG') # saving to the folder on the desktop
     
     for images in os.listdir(folder_dir):
         if images.endswith('.jpg'):
@@ -37,7 +37,7 @@ while image_title != '':
             image_title = input('Name image: ')
             ss_region = (1207, 515, 1870, 1080)
             ss_img = ImageGrab.grab(ss_region)
-            ss_img.save(f'C:\\a\\path\\to\\the\\folder\\{image_title}.jpg', 'JPEG')
+            ss_img.save(f'C:\\a\\path\\to\\the\\folder\\{image_title}.jpg', 'JPEG') # saving to the folder on the desktop
 
             for images in os.listdir(folder_dir):
                 if images.endswith('.jpg'):
@@ -61,9 +61,9 @@ if vpn == 'y':
         mail.Subject = f'Account Enabled: {username}'
         mail.Body = f'Account Enabled: {username}\n Ticket number: {ticket_number}'
 
-        file = f'C:\\a\\path\\to\\the\\folder\\{image_title}.jpg'
-        for screenshot in image:
-            mail.Attachments.Add(file)
+        file = f'C:\\a\\path\\to\\the\\folder\\{image_title}.jpg' # image location on the desktop
+        for screenshot in image: # image is the list I am trying to loop through
+            mail.Attachments.Add(file) # error msg when using 'screenshot', getting error msg: pywintypes.com_error.
             mail.Send()
         print('Email has been sent.')
 
@@ -78,7 +78,7 @@ if vpn == 'y':
         folder_path = ('C:\\a\\path\\to\\the\\folder')
         for folder in os.listdir(folder_path):
             if 'SOX_Screenshots' in folder:
-                message.SaveAs(f'C:\\a\\path\\to\\the\\folder\\{name}')
+                message.SaveAs(f'C:\\a\\path\\to\\the\\folder\\{name}') # saving to another folder loction on the computer
 
     elif enabled_disabled == 'd':
         outlook = win32.Dispatch('outlook.application')
