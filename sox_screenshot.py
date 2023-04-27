@@ -63,7 +63,7 @@ if vpn == 'y':
 
         file = f'C:\\a\\path\\to\\the\\folder'
         for screenshot in image:
-            file_path = os.path.join(file, f'{screenshot}.jpg')
+            file_path = os.path.join(file, f'{screenshot}')
             if os.path.exists(file_path):
                 mail.Attachments.Add(file_path)
         mail.Send()
@@ -90,9 +90,12 @@ if vpn == 'y':
         mail.Body = f'Account Disabled: {username}\n Ticket number: {ticket_number}'
     
         file = f'C:\\a\\path\\to\\the\\folder'
+        
         for screenshot in image:
-            mail.Attachments.Add(file)
-            mail.Send()
+            file_path = os.path.join(file, f'{screenshot}')
+            if os.path.exists(file_path):
+                mail.Attachments.Add(file_path)
+        mail.Send()
         print('Email has been sent.')
 
         time.sleep(15)
