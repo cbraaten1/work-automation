@@ -1,4 +1,4 @@
-'Activating Microsoft operating system.'
+'Activating operating system.'
 Start-Process \\path\to\the\installer\(bat,exe,msi) -Verb RunAs -Wait
 
 'INSTALLING REQUIRED IT SOFTWARE.'
@@ -14,7 +14,7 @@ Start-Process \\path\to\the\installer\(bat,exe,msi) -Wait
 'Installing vulnerability management tool.'
 Start-Process \\path\to\the\installer\(bat,exe,msi) -Wait
 
-'Installing Display Link.'
+'Installing docking station client.'
 Start-Process \\path\to\the\installer\(bat,exe,msi) -ArgumentList -silent -Wait
 
 'Installing VPN client.'
